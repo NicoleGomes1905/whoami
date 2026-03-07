@@ -102,6 +102,7 @@ $win-black: #000000;
   font-size: 12px;
   font-weight: 700;
   cursor: grab;
+  touch-action: none;
   border: 1px solid;
   border-color: #e1d9ff #2a2a2a #2a2a2a #e1d9ff;
 }
@@ -266,19 +267,19 @@ $win-black: #000000;
   }
 
   .win-window {
-    width: calc(100vw - 84px) !important;
+    width: calc(100vw - 84px);
     max-width: calc(100vw - 84px);
     max-height: calc(100vh - 58px);
   }
 
   .window-main {
-    left: 74px !important;
-    top: 10px !important;
+    left: 74px;
+    top: 10px;
   }
 
   .window-projects {
-    left: 74px !important;
-    top: 44px !important;
+    left: 74px;
+    top: 44px;
   }
 
   .taskbar {
@@ -308,14 +309,14 @@ $win-black: #000000;
   }
 
   .win-window {
-    width: calc(100vw - 78px) !important;
+    width: calc(100vw - 78px);
     max-width: calc(100vw - 78px);
     max-height: calc(100vh - 56px);
   }
 
   .window-main,
   .window-projects {
-    left: 68px !important;
+    left: 68px;
   }
 
   .start-button span {

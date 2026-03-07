@@ -1,11 +1,11 @@
 <div class="main-container" (click)="closeStartMenu()">
   
   <div class="desktop-icons">
-    <div class="desktop-item" (dblclick)="openWindow('main')">
+    <div class="desktop-item" (pointerup)="onDesktopIconPointerUp($event, 'main')">
       <img class="desktop-icon-computer" src="windows-icon.png">
       <span>{{ 'desktop.aboutMe' | translate }}</span>
     </div>
-    <div class="desktop-item" (dblclick)="openWindow('projects')">
+    <div class="desktop-item" (pointerup)="onDesktopIconPointerUp($event, 'projects')">
       <img class="desktop-icon-folder" src="folder-icon.png">
       <span>{{ 'desktop.projects' | translate }}</span>
     </div>
@@ -16,6 +16,7 @@
       class="win-window window-main"
       [class.window-opening]="getWindowAnimation('main') === 'opening'"
       [class.window-closing]="getWindowAnimation('main') === 'closing'"
+      (pointerdown)="bringToFront('main')"
       appDraggable
       [style.z-index]="getWindowZIndex('main')"
       style="top: 40px; left: 120px;"
@@ -39,6 +40,7 @@
       class="win-window window-projects"
       [class.window-opening]="getWindowAnimation('projects') === 'opening'"
       [class.window-closing]="getWindowAnimation('projects') === 'closing'"
+      (pointerdown)="bringToFront('projects')"
       appDraggable
       [style.z-index]="getWindowZIndex('projects')"
       style="top: 100px; left: 400px;"

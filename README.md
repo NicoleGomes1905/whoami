@@ -1,59 +1,74 @@
-# WhoAmI
+# Who Am I
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.3.
+Retro desktop-style portfolio built with Angular standalone components.
 
-## Development server
+## Features
 
-To start a local development server, run:
+- Draggable desktop windows (`About Me`, `Projects`)
+- Taskbar with Start button and clock
+- Minimize/restore window behavior
+- Open/close window animations
+- Responsive mobile layout
+- i18n with English and Portuguese
+- CV download button
 
-```bash
-ng serve
-```
+## Tech Stack
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Angular 21 (standalone APIs)
+- SCSS
+- `@ngx-translate/core` for translations
 
-## Code scaffolding
+## Project Structure
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- `src/app/app.*`: desktop shell, taskbar, start menu, window lifecycle
+- `src/app/services/window-manager.ts`: centralized window state
+- `src/app/components/about-me/*`: profile window
+- `src/app/components/projects/*`: projects window
+- `src/app/directives/draggable.ts`: drag behavior
+- `src/app/i18n/en.ts` / `src/app/i18n/pt.ts`: translations
 
-```bash
-ng generate component component-name
-```
+## Getting Started
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Prerequisites
 
-```bash
-ng generate --help
-```
+- Node.js 20+
+- npm 10+
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+### Install
 
 ```bash
-ng test
+npm install
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+### Run locally
 
 ```bash
-ng e2e
+npm start
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+App runs at `http://localhost:4200`.
 
-## Additional Resources
+## Scripts
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- `npm start`: start dev server
+- `npm run build`: production build in `dist/`
+- `npm run watch`: build in watch mode
+- `npm test`: run unit tests
+
+## Build
+
+```bash
+npm run build
+```
+
+Output is generated in `dist/who-am-i/`.
+
+## Localization
+
+- Default language: English (`en`)
+- Portuguese available: `pt`
+- Language switch is inside the Start menu.
+
+## Assets
+
+Static assets are served from `public/` (icons, project images, CV).

@@ -35,7 +35,7 @@ export class App {
 
   readonly actions = [
     { type: 'minimize', label: '_' },
-    { type: 'maximize', label: '□' },
+    { type: 'maximize', label: '?' },
     { type: 'close', label: 'X' }
   ];
 
@@ -70,6 +70,10 @@ export class App {
     return this.windowManager.getWindow(windowName).zIndex;
   }
 
+  bringToFront(windowName: WindowId): void {
+    this.windowManager.bringToFront(windowName);
+  }
+
   openWindow(windowName: WindowId): void {
     this.windowManager.openWindow(windowName);
     this.playOpenAnimation(windowName);
@@ -101,6 +105,17 @@ export class App {
 
   closeStartMenu(): void {
     this.isStartMenuOpen.set(false);
+  }
+
+  onDesktopIconPointerUp(event: PointerEvent, windowName: WindowId): void {
+    if (event.pointerType === 'touch' || event.pointerType === 'pen') {
+      this.openWindow(windowName);
+      return;
+    }
+
+    if (event.pointerType === 'mouse' && event.detail >= 2) {
+      this.openWindow(windowName);
+    }
   }
 
   handleAction(type: string, windowName: WindowId): void {
@@ -163,3 +178,4 @@ export class App {
     });
   }
 }
+
