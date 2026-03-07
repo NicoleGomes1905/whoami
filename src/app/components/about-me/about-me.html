@@ -1,0 +1,15 @@
+<div class="section-container">
+  <div class="about-me-title">
+    <h1>{{ 'about.name' | translate }}</h1>
+    <p>{{ 'about.role' | translate }}</p>
+    <button class="win-button" (click)="openProjects()">{{ 'about.seeProjects' | translate }}</button>
+  </div>
+  <div class="about-me-content">
+    <img class="my-image" src="my-image.jpg" />
+    <div class="section-text-container">
+      <h2 class="section-second-title">{{ 'about.title' | translate }}</h2>
+      <p>{{ 'about.description' | translate }}</p>
+      <button class="win-button" (click)="downloadCV()">{{ 'about.downloadCv' | translate }}</button>
+    </div>
+  </div>
+</div>

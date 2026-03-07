@@ -1,0 +1,139 @@
+$win-gray: #cccccc;
+$win-white: #ffffff;
+$win-shadow: #464646;
+$win-black: #000000;
+$win-blue-dark: #000080;  
+$win-blue-light: #1084d0; 
+
+
+.win-options {
+  border-bottom: 1px solid $win-shadow;
+  padding: 0 0.5rem;
+}
+
+.action-button {
+  appearance: none;
+  background: none;    
+  border: none;     
+  padding: 0; 
+  cursor: pointer;  
+  outline: none;      
+  font: inherit;     
+  color: inherit;       
+  padding: 0.2rem 0.5rem;
+}
+
+
+.win-select-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-top: 3px solid $win-white;
+  padding: 0.2rem 0.5rem;
+  padding-bottom: 0;
+}
+
+.win-select-field {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  padding: 0.3rem;
+  border-bottom: 1px solid $win-black;
+}
+
+.win-select-content {
+  display: flex;       
+  align-items: center; 
+  gap: 4px;           
+  padding-left: 2px;  
+  font-size: 20px;
+}
+
+.win-select-field {
+  background-color: $win-white;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  
+  border-top: 2px solid $win-shadow;
+  border-left: 2px solid $win-shadow;
+  border-bottom: 1px solid $win-shadow;
+}
+
+.win-icon-small {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+.win-select-arrow {
+  background-color: $win-gray;
+  width: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  appearance: none;
+  border: none;
+  background-color: $win-gray;
+  box-shadow: 
+    inset 1px 1px $win-white, 
+    inset -1px -1px $win-shadow, 
+    1px 1px $win-black;
+  padding: 5px;
+  font-family: "Microsoft Sans Serif", Tahoma, sans-serif;
+  font-size: 11px;
+  cursor: pointer;
+
+  &:active {
+
+    border-top: 2px solid #464646;
+    border-left: 2px solid #464646;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    padding: 3px 5px 1px 7px;
+  }
+}
+
+.win-select-list {
+  position: absolute;  
+  top: 100%;            
+  left: 0.5rem;         
+  
+  display: flex;
+  flex-direction: column;
+  
+  min-width: 36.7%;   
+  background-color: $win-white;
+  
+  border-left: 1px solid $win-shadow;
+  border-top: 1px solid $win-shadow;
+  border-right: 1px solid $win-black;
+  border-bottom: 1px solid $win-black;
+  
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.2); 
+  z-index: 999;         
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.win-select-options {
+  appearance: none;
+  background: $win-white;    
+  border: none;     
+  padding: 0; 
+  cursor: pointer;  
+  outline: none;      
+  font: inherit;     
+  color: inherit;       
+  padding: 0.2rem 0.5rem;
+}
+
+.arrow-down-button {
+  appearance: none;   
+  border: none;  
+  background: none;
+  padding-top: 0.1rem;
+}
+

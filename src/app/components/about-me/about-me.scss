@@ -1,0 +1,83 @@
+$win-gray: #d4d0c8;
+$win-shadow: #464646;
+
+.section-container {
+  display: flex;
+  flex-direction: column;
+  padding: 15px; 
+  gap: 15px;
+}
+
+.about-me-content {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.about-me-title p {
+ padding-bottom: 10px;
+}
+
+.my-image {
+  width: 120px;
+  height: 120px;
+  border: 2px solid;
+  border-color: $win-shadow #fff #fff $win-shadow;
+  object-fit: cover;
+}
+
+.section-text-container {
+  background-color: $win-gray;
+  padding: 10px;
+  border-right: 2px solid $win-shadow;
+  border-bottom: 2px solid $win-shadow;
+  
+  p { font-size: 0.8rem;  padding: 10px 0;}
+}
+
+@media (max-width: 920px) {
+  .section-container {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .about-me-title h1 {
+    font-size: 2rem;
+    line-height: 1.05;
+  }
+
+  .about-me-title p {
+    font-size: 1.45rem;
+  }
+
+  .about-me-content {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .my-image {
+    width: 132px;
+    height: 132px;
+    align-self: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-me-title h1 {
+    font-size: 1.1rem;
+  }
+
+  .about-me-title p {
+    font-size: 0.95rem;
+  }
+
+  .section-text-container p {
+    font-size: 0.78rem;
+    line-height: 1.25;
+  }
+}

@@ -1,0 +1,22 @@
+<div class="section-container">
+  
+    @for (project of projectsList; track project.nameKey) {
+      <div class="project-item">
+        <div class="projects-links">
+          <div class="repository-link">
+            <img class="folder-icon" src="folder-icon.png" />
+            <a class="win-button" target="_blank" href="{{ project.repositoryLink }}">{{ 'projects.seeCode' | translate }}</a>
+          </div>
+          <div class="demo-link">
+            <img class="project-image" src="{{ project.imagePath }}" />
+            <a class="win-button" target="_blank" href="{{ project.demoLink }}">{{ 'projects.seeDemo' | translate }}</a>
+          </div>
+        </div>
+        <div class="section-text-container">
+          <h2 class="section-second-title">{{ project.nameKey | translate }}</h2>
+          <p>{{ project.descriptionKey | translate }}</p>
+        </div>
+      </div>
+    }
+  
+</div>
