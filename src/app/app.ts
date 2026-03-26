@@ -107,15 +107,8 @@ export class App {
     this.isStartMenuOpen.set(false);
   }
 
-  onDesktopIconPointerUp(event: PointerEvent, windowName: WindowId): void {
-    if (event.pointerType === 'touch' || event.pointerType === 'pen') {
-      this.openWindow(windowName);
-      return;
-    }
-
-    if (event.pointerType === 'mouse' && event.detail >= 2) {
-      this.openWindow(windowName);
-    }
+  onDesktopIconClick(windowName: WindowId): void {
+    this.openWindow(windowName);
   }
 
   handleAction(type: string, windowName: WindowId): void {

@@ -1,11 +1,11 @@
 <div class="main-container" (click)="closeStartMenu()">
   
   <div class="desktop-icons">
-    <div class="desktop-item" (pointerup)="onDesktopIconPointerUp($event, 'main')">
+    <div class="desktop-item" (click)="onDesktopIconClick('main')">
       <img class="desktop-icon-computer" src="windows-icon.png">
       <span>{{ 'desktop.aboutMe' | translate }}</span>
     </div>
-    <div class="desktop-item" (pointerup)="onDesktopIconPointerUp($event, 'projects')">
+    <div class="desktop-item" (click)="onDesktopIconClick('projects')">
       <img class="desktop-icon-folder" src="folder-icon.png">
       <span>{{ 'desktop.projects' | translate }}</span>
     </div>
